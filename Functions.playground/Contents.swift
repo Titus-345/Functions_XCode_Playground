@@ -1,4 +1,3 @@
-
 //func rollDice(howManySides diceSides: Int) {
 //    print("you rolled a \(Int.random(in: 1...diceSides)) on a \(diceSides)-sided die")
 //}
@@ -23,11 +22,14 @@
 func rollSeveralDice(numberOfDice num:Int, diceSides sides:Int) {
     print("rolling \(num) \(sides)-sided dice")
     var runningSum = 0
-    for die in 0..<num {
-       var roll = (Int.random(in: 1...sides))
-        print(String(roll))
+    var arrayOfRolls = [Int]()
+    for _ in 0..<num {
+       let roll = (Int.random(in: 1...sides))
         runningSum += roll
+        arrayOfRolls.append(roll)
     }
+
+    print("\()")
     print("Total Roll: \(runningSum)")
 }
 
